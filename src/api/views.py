@@ -7,6 +7,7 @@ from lists.models import Todo, TodoList
 from django.http import HttpResponse
 from django.utils import timezone
 import time
+from todolist.metrics import HTTP_REQUESTS_TOTAL
 
 startup_time = timezone.now()
 
@@ -59,6 +60,7 @@ class TodoViewSet(viewsets.ModelViewSet):
         user = self.request.user
         creator = user if user.is_authenticated else None
         serializer.save(creator=creator)
+
 
 # Health Check View
 def health(request):
