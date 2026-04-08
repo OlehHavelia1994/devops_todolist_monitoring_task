@@ -7,7 +7,6 @@ from lists.models import Todo, TodoList
 from django.http import HttpResponse
 from django.utils import timezone
 import time
-from todolist.metrics import HTTP_REQUESTS_TOTAL
 
 startup_time = timezone.now()
 

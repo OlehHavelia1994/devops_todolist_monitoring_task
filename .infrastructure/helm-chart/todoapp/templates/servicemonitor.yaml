@@ -5,8 +5,8 @@ metadata:
   name: {{ .Chart.Name }}-service-monitor
   namespace: {{ .Values.todoapp.namespace }}
   labels:
-    release: {{ .Values.todoapp.serviceMonitor.labels.release }}
-    app: {{ .Values.todoapp.serviceMonitor.labels.app }}
+    release: {{ .Values.todoapp.serviceMonitor.release }}
+    app: {{ .Values.todoapp.serviceMonitor.app }}
 spec:
   jobLabel: job
   endpoints:
